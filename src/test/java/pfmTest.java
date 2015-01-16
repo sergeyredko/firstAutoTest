@@ -54,6 +54,8 @@ public class pfmTest {
 
         element = driver.findElement(By.xpath("//span[@class='text']"));
         element.click();
+
+        element.submit();
     }
 
     public static void courseraTest()
