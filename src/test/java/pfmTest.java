@@ -8,8 +8,8 @@ import java.util.concurrent.TimeUnit;
 
 public class pfmTest {
     public static void main(String[] args) {
-        //mailTest();
-        //courseraTest();
+        mailTest();
+        courseraTest();
         facebookTest();
     }
 
@@ -68,5 +68,13 @@ public class pfmTest {
         element.sendKeys("Jut_123123");
         element.submit();
         driver.close();
+    }
+
+    public static void yandexTest()
+    {
+        WebDriver driver = new FirefoxDriver();
+        driver.get("https://yandex.by/");
+
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     }
 }
