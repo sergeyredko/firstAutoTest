@@ -8,16 +8,14 @@ import java.lang.String;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-public class LoginPageTest {
+public class MailLoginPageTest {
     private static final String USER_NAME_FOR_LOGIN = "auto_test_user01";
     private static final String PASSWORD_FOR_LOGIN = "Jut_123123";
     private static final String LOGIN_PAGE_LOGIN_FIELD_XPATH = "//input[@id='mailbox__login']";
     private static final String LOGIN_PAGE_PASSWORD_FIELD_XPATH = "//input[@id='mailbox__password']";
     private static final String MAIL_URL_FOR_TEST = "https://mail.ru";
-    private static final String COURSERA_URL_FOR_TEST = "https://coursera.org";
     private static final String EXPECTED_USER_EMAIL_XPATH = "//i[@id='PH_user-email']";
     private WebElement element;
     WebDriver driver;
@@ -46,14 +44,4 @@ public class LoginPageTest {
     {
         driver.quit();
     }
-
-    @Test(description = "Проверяем авторизацию пользователя на coursera.org")
-    public void checkLoginCourseraTest()
-    {
-
-        driver.get(COURSERA_URL_FOR_TEST);
-
-    }
-
-
 }
