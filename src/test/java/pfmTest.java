@@ -4,10 +4,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 
+import java.util.concurrent.TimeUnit;
+
 public class pfmTest {
     public static void main(String[] args) {
-        mailTest();
-        courseraTest();
+        //mailTest();
+        //courseraTest();
+        facebookTest();
     }
 
     public static void mailTest()
@@ -24,6 +27,35 @@ public class pfmTest {
         element = driver.findElement(By.xpath("//a[@id='PH_logoutLink']"));
         element.click();
         driver.close();
+    }
+
+    public static void facebookTest()
+    {
+        WebDriver driver = new FirefoxDriver();
+        driver.get("https://facebook.com/");
+
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+
+        WebElement element = driver.findElement(By.xpath("//input[@id='email']"));
+        element.sendKeys("sergeyrid@mail.ru");
+
+        element = driver.findElement(By.xpath("//input[@id='pass']"));
+        element.sendKeys("2280104asdf");
+
+        element.submit();
+
+        driver.get("https://www.facebook.com/sergey.redjko/about?ref=home_edit_profile&section=work");
+
+        element = driver.findElement(By.xpath("//span[@class='_21ok _50f5']"));
+        element.click();
+
+        element = driver.findElement(By.xpath("//input[@id='u_5_0']"));
+        element.sendKeys("МГЭУ им. А.Д.Сахарова");
+
+        element = driver.findElement(By.xpath("//span[@class='text']"));
+        element.click();
+
+        element.submit();
     }
 
     public static void courseraTest()
