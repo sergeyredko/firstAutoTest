@@ -1,16 +1,18 @@
 package com.autotesting.framework.screens;
 
+import com.autotesting.framework.utils.WebDriverRunner;
 import org.openqa.selenium.WebDriver;
 import org.apache.log4j.Logger;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class MailBaseScreen {
 
     protected static final Logger log = Logger.getLogger(WebDriver.class);
+    FirefoxDriver driver = new WebDriverRunner().getDriver();
 
-    public MailBaseScreen mailCloseBrowser(WebDriver webDriver)
+    public MailBaseScreen mailCloseBrowser()
     {
-        log.info("Закрываем браузер");
-        webDriver.quit();
+        WebDriverRunner.closeBrowser();
         return this;
     }
 }
