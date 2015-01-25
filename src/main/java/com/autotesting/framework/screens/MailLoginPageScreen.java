@@ -1,9 +1,6 @@
 package com.autotesting.framework.screens;
 
-
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
 public class MailLoginPageScreen extends MailBaseScreen{
     private final String MAIL_URL_FOR_TEST = "https://mail.ru";
@@ -29,24 +26,21 @@ public class MailLoginPageScreen extends MailBaseScreen{
     public MailLoginPageScreen inputLogin()
     {
         log.info(String.format("Вводим логин: '%s'", USER_NAME_FOR_LOGIN));
-        WebElement element = driver.findElement(By.xpath(LOGIN_PAGE_LOGIN_FIELD_XPATH));
-        element.sendKeys(USER_NAME_FOR_LOGIN);
+        driver.enterTextByXpath(LOGIN_PAGE_LOGIN_FIELD_XPATH, USER_NAME_FOR_LOGIN);
         return this;
     }
 
     public MailLoginPageScreen inputPassword()
     {
         log.info(String.format("Вводим пароль: '%s'", PASSWORD_FOR_LOGIN));
-        WebElement element = driver.findElement(By.xpath(LOGIN_PAGE_PASSWORD_FIELD_XPATH));
-        element.sendKeys(PASSWORD_FOR_LOGIN);
+        driver.enterTextByXpath(LOGIN_PAGE_PASSWORD_FIELD_XPATH, PASSWORD_FOR_LOGIN);
         return this;
     }
 
     public MailLoginPageScreen submitAuthorizationMailForm()
     {
         log.info(String.format("Отправляем форму кликом по кнопке Войти"));
-        WebElement element = driver.findElement(By.xpath(LOGIN_PAGE_BUTTON_XPATH));
-        element.click();
+        driver.clickByXpath(LOGIN_PAGE_BUTTON_XPATH);
         return this;
     }
 }

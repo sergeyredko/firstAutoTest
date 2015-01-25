@@ -1,7 +1,6 @@
 package com.autotesting.framework.suits;
 
 import com.autotesting.framework.screens.MailLoginPageScreen;
-import org.openqa.selenium.WebElement;
 import java.lang.String;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
