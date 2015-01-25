@@ -22,7 +22,7 @@ public class WebDriverRunner {
     }
 
     public static void closeBrowser(){
-        log.info("Закрываем драйвер");
+        log.info("Закрываем браузер");
         driver.quit();
     }
 }
