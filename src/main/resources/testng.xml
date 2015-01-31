@@ -6,4 +6,7 @@
             <package name="com.autotesting.framework.suits"/>
         </packages>
     </test>
+    <listeners>
+        <listener class-name="com.autotesting.framework.utils.TestngEventsListener"/>
+    </listeners>
 </suite>

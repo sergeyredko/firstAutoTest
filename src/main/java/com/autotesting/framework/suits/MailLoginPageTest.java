@@ -7,7 +7,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
 public class MailLoginPageTest {
-    private static final String USER_NAME_FOR_LOGIN = "auto_test_user01";
+    private static final String USER_NAME_FOR_LOGIN = "auto_test_user011";
     protected MailLoginPageScreen mailLoginPageScreen;
 
     @Test(description = "Проверяем авторизацию пользователя на mail.ru")

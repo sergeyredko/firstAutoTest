@@ -14,14 +14,9 @@ import com.autotesting.framework.screens.MailBaseScreen;
 
 public class Photographer {
     private static String SNAPSHOTS_FOLDER = "test-output/snapshot";
-    protected final static Logger log = Logger.getLogger(MailBaseScreen.class);
+    protected final static Logger log = Logger.getLogger(Photographer.class);
 
     public static String getSnapshotName(String driverCommand) {
-        try {
-            SNAPSHOTS_FOLDER = "q";
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
         File folder = new File(SNAPSHOTS_FOLDER);
         if (!folder.exists()) {
             try {
@@ -34,7 +29,7 @@ public class Photographer {
         return folder.getAbsolutePath() + "/" + timestamp + "_" + driverCommand;
     }
 
-    public static String nowAsString(String dateFormat) {
+    private static String nowAsString(String dateFormat) {
         Calendar cal = Calendar.getInstance();
         SimpleDateFormat sdf = new SimpleDateFormat(dateFormat);
         return sdf.format(cal.getTime());
