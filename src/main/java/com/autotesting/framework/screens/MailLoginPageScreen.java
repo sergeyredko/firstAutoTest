@@ -1,6 +1,7 @@
 package com.autotesting.framework.screens;
 
 import org.openqa.selenium.By;
+import com.autotesting.framework.utils.PropertiesReader;
 
 public class MailLoginPageScreen extends MailBaseScreen{
     private final String MAIL_URL_FOR_TEST = "https://mail.ru";
@@ -26,14 +27,22 @@ public class MailLoginPageScreen extends MailBaseScreen{
     public MailLoginPageScreen inputLogin()
     {
         log.info(String.format("Вводим логин: '%s'", USER_NAME_FOR_LOGIN));
-        driver.enterTextByXpath(LOGIN_PAGE_LOGIN_FIELD_XPATH, USER_NAME_FOR_LOGIN);
+        try {
+            driver.enterTextByXpath(LOGIN_PAGE_LOGIN_FIELD_XPATH, PropertiesReader.getPropertiesReader().getLogin());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         return this;
     }
 
     public MailLoginPageScreen inputPassword()
     {
         log.info(String.format("Вводим пароль: '%s'", PASSWORD_FOR_LOGIN));
-        driver.enterTextByXpath(LOGIN_PAGE_PASSWORD_FIELD_XPATH, PASSWORD_FOR_LOGIN);
+        try {
+            driver.enterTextByXpath(LOGIN_PAGE_PASSWORD_FIELD_XPATH, PropertiesReader.getPropertiesReader().getPassword());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         return this;
     }
 
