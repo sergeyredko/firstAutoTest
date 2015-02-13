@@ -1,0 +1,8 @@
+com\autotesting\framework\screens\MailBaseScreen.class
+com\autotesting\framework\utils\PropertiesReader.class
+com\autotesting\framework\utils\WebDriverRunner.class
+com\autotesting\framework\utils\WebDriverWrapper.class
+com\autotesting\framework\utils\TestngEventsListener.class
+com\autotesting\framework\suits\MailLoginPageTest.class
+com\autotesting\framework\screens\MailLoginPageScreen.class
+com\autotesting\framework\utils\Photographer.class

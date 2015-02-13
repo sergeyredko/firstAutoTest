@@ -6,7 +6,7 @@ import org.testng.Assert;
 
 import java.util.concurrent.TimeUnit;
 
-public class pfmTest {
+public class firstAutoTest {
     public static void main(String[] args) {
         //mailTest();
         //courseraTest();
