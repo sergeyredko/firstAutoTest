@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
-Test set: firstAutoTest
+Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.628 sec
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 74.032 sec - in TestSuite
